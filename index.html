@@ -31,11 +31,7 @@
  	var countryData=[];
  	var countryOECD=[];
   	
-  	d3.tsv("data/country_OECD.tsv", function(error, coudata){
-   	 	coudata.forEach(function(d){
-        	countryOECD.push(d);
-  		})
-   	})
+  
 
   	d3.tsv("data/coord_country.tsv", function(error, coudata){
    	 	coudata.forEach(function(d){
@@ -204,6 +200,7 @@
 
 
 		var counter = 0;
+		tabCoord=[];
 		countryData.filter(function (d) { return d.isOnMap != ""; }).forEach(function (d) {
 			tabCoord.push("<b>country:</b> " + d.Country + " - ISO3: " + d.ISO3 + " - LAT: " + d.lat + " -  Long: " + d.lng + " - x: " + projection([d.lng, d.lat])[0] + " - y: " + projection([d.lng, d.lat])[1] +"<br/>")
 			counter++;
