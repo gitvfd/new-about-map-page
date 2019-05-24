@@ -1,3 +1,6 @@
+body{
+  background:#e6ebe9;
+}
 h1{
   float:left;
   margin-top: 2px;
@@ -30,8 +33,17 @@ div.tooltip {
       width: auto;
       height: auto;
       max-width: 250px;
-      padding: 10px;
-      background-color: white;
+    margin-top: -1.25em;
+    padding: 0.75em 1em;
+    font-family: "Oswald", sans-serif;
+    white-space: nowrap;
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #04629a;
+
+    background: #FFFFFF;
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
       border-radius: 2px;
@@ -39,15 +51,25 @@ div.tooltip {
       -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
       box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
       pointer-events: none;
-      opacity: 0.90;
-      filter:alpha(opacity=90);
-      -moz-opacity:0.90;
+    transform: translate(-50%,-100%);
+}
+
+div.tooltip::after {
+  content: " ";
+  position: absolute;
+  top: 100%;  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
 }
 
 #world {
   /**stroke: #deeaf1;**/
   stroke-width: 0px;
- fill: #deeaf1;
+ fill: #c0c7c9;
+ stroke:#c0c7c9;
   opacity: 1;
 }
 
